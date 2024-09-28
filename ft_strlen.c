@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmonfort <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 20:32:11 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/09/17 20:32:20 by rmonfort         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:35:46 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	count;
 

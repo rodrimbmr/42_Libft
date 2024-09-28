@@ -6,7 +6,7 @@
 /*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 20:20:16 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/09/26 12:09:39 by rmonfort         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:37:36 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*srcc;
 	size_t			i;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	i = 0;
 	destc = (unsigned char *)dest;
 	srcc = (unsigned char *)src;
