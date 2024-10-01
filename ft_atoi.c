@@ -1,20 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 23:50:45 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/10/01 20:00:46 by rmonfort         ###   ########.fr       */
+/*   Created: 2024/09/30 17:47:24 by rmonfort          #+#    #+#             */
+/*   Updated: 2024/10/01 19:59:41 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <stdlib.h>
 
-int	ft_toupper(int c)
+int	ft_atoi(const char *nptr)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	int	i;
+	int	result;
+	int	sign;
+
+	sign = 1;
+	result = 0;
+	i = 0;
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = ((result * 10) + nptr[i]) - '0';
+		i++;
+	}
+	return (result * sign);
 }

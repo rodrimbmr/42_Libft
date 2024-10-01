@@ -6,7 +6,7 @@
 /*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:56:07 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/09/28 01:12:31 by rmonfort         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:52:43 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 
 void	ft_bzero(void *s, size_t n);
-int		ft_isalphanum(int c);
+int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
@@ -33,5 +33,11 @@ int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_strncmp(char *s1, char *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_strlen(const char *str);
+int		ft_atoi(const char *nptr);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif

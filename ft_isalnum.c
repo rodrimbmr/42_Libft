@@ -6,11 +6,11 @@
 /*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 18:43:53 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/09/19 20:34:09 by rmonfort         ###   ########.fr       */
+/*   Updated: 2024/10/01 04:32:28 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalphanum(int c)
+int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
 		|| (c >= '0' && c <= '9'))
