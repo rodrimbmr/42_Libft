@@ -1,40 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:05:38 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/10/01 23:32:20 by rmonfort         ###   ########.fr       */
+/*   Created: 2024/10/04 01:18:39 by rmonfort          #+#    #+#             */
+/*   Updated: 2024/10/08 04:03:17 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdlib.h>
 #include <string.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+static int	comparator(char c, char const *set)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	if (*little == '\0')
-		return ((char *)big);
 	i = 0;
-	while (big[i] != '\0' && i < len)
+	while (set[i])
 	{
-		if (big[i] == little[0])
-		{
-			j = 0;
-			while (big[i] != '\0' && (i + j) < len)
-			{
-				if (big[i + j] != little[j])
-					break ;
-				if (little[j + 1] == '\0')
-					return ((char *)&big[i]);
-				j++;
-			}
-		}
+		if (c == set[i])
+			return (1);
 		i++;
 	}
-	return (NULL);
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		u;
+	int		d;
+	char	*res;
+
+	if (!s1 || !set)
+		return (NULL);
+	u = 0;
+	while (comparator(s1[u], set) != 0)
+		u++;
+	d = ft_strlen(s1) - 1;
+	while (comparator(s1[d], set) != 0)
+		d--;
+	res = ft_substr(s1, u, d - u + 1);
+	return (res);
 }
