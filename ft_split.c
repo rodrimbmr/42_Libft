@@ -24,12 +24,13 @@ static unsigned int	wlc(char const *str, char c)
 	count = 0;
 	while (str[i])
 	{
-			if((str[i]) != c && str[i])
+			while (str[i] == c && str[i])
+				i++;
+			if(str[i] != '\0')
 			{
 				count++;
-				i++;
 			}
-			else
+			while (str[i] != c && str[i])
 				i++;
 	}
 	return (count);
@@ -38,12 +39,8 @@ static unsigned int	wlc(char const *str, char c)
 static void	split_cleaner(char **res, int p)
 {
 	if (p > 0)
-	{
 		while (p-- > 0)
-		{
 			free(res[p]);
-		}
-	}
 	free(res);
 }
 
@@ -55,7 +52,6 @@ static char	**divisor(char *s, char c, char **res)
 
 	p = 0;
 	i = 0;
-	j = 0;
 	while (s[i])
 	{
 		while (s[i] == c && s[i])
