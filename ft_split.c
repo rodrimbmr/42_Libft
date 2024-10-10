@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
-
 
 static unsigned int	wlc(char const *str, char c)
 {
@@ -78,7 +75,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	result = (char **)calloc(sizeof(char *), wlc(s, c) + 1);
+	result = (char **)ft_calloc(sizeof(char *), wlc(s, c) + 1);
 	if (!result)
 		return (NULL);
 	result = divisor ((char *)s, c, result);
