@@ -21,14 +21,12 @@ static unsigned int	wlc(char const *str, char c)
 	count = 0;
 	while (str[i])
 	{
-			while (str[i] == c && str[i])
-				i++;
-			if(str[i] != '\0')
-			{
-				count++;
-			}
-			while (str[i] != c && str[i])
-				i++;
+		while (str[i] == c && str[i])
+			i++;
+		if (str[i] != '\0')
+			count++;
+		while (str[i] != c && str[i])
+			i++;
 	}
 	return (count);
 }
@@ -56,7 +54,7 @@ static char	**divisor(char *s, char c, char **res)
 		j = i;
 		while (s[j] != c && s[j])
 			j++;
-		if(i < j)
+		if (i < j)
 		{
 			res[p] = ft_substr(s, i, j - i);
 			if (!res[p])
@@ -66,7 +64,7 @@ static char	**divisor(char *s, char c, char **res)
 		i = j;
 	}
 	res [p] = NULL;
-	return(res);
+	return (res);
 }
 
 char	**ft_split(char const *s, char c)
@@ -79,5 +77,5 @@ char	**ft_split(char const *s, char c)
 	if (!result)
 		return (NULL);
 	result = divisor ((char *)s, c, result);
-	return(result);
+	return (result);
 }

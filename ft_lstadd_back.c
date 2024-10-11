@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmonfort <rmonfort@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 20:19:34 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/09/26 15:49:20 by rmonfort         ###   ########.fr       */
+/*   Created: 2024-10-11 03:28:40 by rmonfort          #+#    #+#             */
+/*   Updated: 2024-10-11 03:28:40 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	t_list	*last;
+
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+	}
+	else
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
 }

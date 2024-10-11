@@ -28,6 +28,7 @@ static unsigned long	num_counter(int n)
 	}
 	return (c);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*res;
@@ -52,5 +53,5 @@ char	*ft_itoa(int n)
 		res[len--] = (n % 10) + '0';
 		n /= 10;
 	}
-	return(res);
+	return (res);
 }

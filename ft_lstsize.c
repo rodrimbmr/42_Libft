@@ -17,10 +17,10 @@ int	ft_lstsize(t_list *lst)
 	int	count;
 
 	count = 0;
-	while (lst != NULL)// Mientras no lleguemos al final de la lista
+	while (lst != NULL)
 	{
-		count++;// Incrementamos el contador
-		lst = lst->next;// Avanzamos al siguiente nodo
+		count++;
+		lst = lst->next;
 	}
-	return (count);// Devolvemos el número de nodos
+	return (count);
 }
