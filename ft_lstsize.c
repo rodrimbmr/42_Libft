@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmonfort <rmonfort@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-10 22:59:30 by rmonfort          #+#    #+#             */
-/*   Updated: 2024-10-10 22:59:30 by rmonfort         ###   ########.fr       */
+/*   Created: 2024-10-11 03:10:01 by rmonfort          #+#    #+#             */
+/*   Updated: 2024-10-11 03:10:01 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	int	count;
+
+	count = 0;
+	while (lst != NULL)// Mientras no lleguemos al final de la lista
+	{
+		count++;// Incrementamos el contador
+		lst = lst->next;// Avanzamos al siguiente nodo
+	}
+	return (count);// Devolvemos el número de nodos
 }
