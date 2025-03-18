@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmonfort <rmonfort@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmonfort <rmonfort@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:56:07 by rmonfort          #+#    #+#             */
-/*   Updated: 2024/10/08 21:41:20 by rmonfort         ###   ########.fr       */
+/*   Updated: 2025/03/18 01:44:14 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
+int		ft_isspace(int c);
 //BONUS
 
 typedef struct s_list
