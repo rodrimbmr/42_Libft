@@ -6,13 +6,13 @@
 /*   By: rmonfort <rmonfort@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 02:00:20 by rmonfort          #+#    #+#             */
-/*   Updated: 2025/03/25 18:44:53 by rmonfort         ###   ########.fr       */
+/*   Updated: 2025/04/16 19:32:55 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long	ft_atol(const char *s)
+long	ft_atol(const char *s)
 {
 	long	result;
 	int		sign;

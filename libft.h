@@ -6,7 +6,7 @@
 /*   By: rmonfort <rmonfort@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:56:07 by rmonfort          #+#    #+#             */
-/*   Updated: 2025/03/18 02:54:10 by rmonfort         ###   ########.fr       */
+/*   Updated: 2025/04/16 19:33:09 by rmonfort         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putendl_fd(char *s, int fd);
 int			ft_isspace(int c);
-static long	ft_atol(const char *s);
+long		ft_atol(const char *s);
 //BONUS
 
 typedef struct s_list
